@@ -4,7 +4,7 @@
  * The public-facing functionality of the plugin.
  *
  * @link       http://webophonic.com
- * @since      1.0.0
+ * @since      0.1.0
  *
  * @package    Wordogs
  * @subpackage Wordogs/public
@@ -25,16 +25,16 @@ class Wordogs_Public {
 	/**
 	 * The ID of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
+	 * @var      string    $WORDOGS    The ID of this plugin.
 	 */
-	private $plugin_name;
+	private $WORDOGS;
 
 	/**
 	 * The version of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 * @access   private
 	 * @var      string    $version    The current version of this plugin.
 	 */
@@ -43,13 +43,13 @@ class Wordogs_Public {
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of the plugin.
+	 * @since    0.1.0
+	 * @param      string    $WORDOGS       The name of the plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct( $WORDOGS, $version ) {
 
-		$this->plugin_name = $plugin_name;
+		$this->WORDOGS = $WORDOGS;
 		$this->version = $version;
 
 	}
@@ -57,7 +57,7 @@ class Wordogs_Public {
 	/**
 	 * Register the stylesheets for the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 */
 	public function enqueue_styles() {
 
@@ -73,14 +73,14 @@ class Wordogs_Public {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wordogs-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->WORDOGS, plugin_dir_url( __FILE__ ) . 'css/wordogs-public.css', array(), $this->version, 'all' );
 
 	}
 
 	/**
 	 * Register the JavaScript for the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 */
 	public function enqueue_scripts() {
 
@@ -96,7 +96,7 @@ class Wordogs_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wordogs-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->WORDOGS, plugin_dir_url( __FILE__ ) . 'js/wordogs-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 

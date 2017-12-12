@@ -15,7 +15,10 @@ Wordogs is a wordpress plugin for Discogs. Custom Types (a.k.a. Records), Widget
 Wordogs is a wordpress plugin for Discogs. Create and synchronies records based on your discogs collection
 
 oAuth 
-Two modes available : Masters driven synchronisation (MDS_MODE) or Releases driven synchronisation (RDS_MODE)
+Master releases driven synchronisation. 
+	Ex : Neil Young Harvest > 3 releases in collection 
+	If you're looking for a releases based synchronisation see Discpress Plugin
+
 Widgets : wantlist, latest
 
 WARNING : This is not a theme ... See Wordogs  
@@ -31,7 +34,7 @@ WARNING : This is not a theme ... See Wordogs
 
 = Why ? =
 
-Mainly because Discpress wasn't working...
+Mainly because Discpress wasn't working as expected
 
 
 == Screenshots ==

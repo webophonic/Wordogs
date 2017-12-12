@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              http://webophonic.com
- * @since             1.0.0
+ * @since             0.1.0
  * @package           Wordogs
  *
  * @wordpress-plugin
  * Plugin Name:       Wordogs
  * Plugin URI:        Wordogs
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Description:       Wordogs is a wordpress plugin for Discogs. Custom Types (a.k.a. Records), Widgets, Shortcodes,..
+ * Version:           0.1.0
  * Author:            webophonic
  * Author URI:        http://webophonic.com
  * License:           GPL-2.0+
@@ -31,11 +31,16 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
- * Currently pligin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
+ * Currently pligin (sic) version.
  */
-define( 'PLUGIN_NAME_VERSION', '1.0.0' );
+define( 'WORDOGS_VERSION', '0.1.0' );
+
+//Webophonic Toolkits 
+require_once( plugin_dir_path( __FILE__ ) . 'includes/WebophonicFunctions.php');
+require_once( plugin_dir_path( __FILE__ ) . 'includes/WebophonicTypes.php');
+require_once( plugin_dir_path( __FILE__ ) . 'includes/class-records.php');
+array_push($tisselys_plugin_variables['tisselysTypes'],new TisselysProgrammes());
+
 
 /**
  * The code that runs during plugin activation.
@@ -71,7 +76,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wordogs.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.0
+ * @since    0.1.0
  */
 function run_wordogs() {
 

@@ -4,7 +4,7 @@
  * Fired during plugin deactivation
  *
  * @link       http://webophonic.com
- * @since      1.0.0
+ * @since      0.1.0
  *
  * @package    Wordogs
  * @subpackage Wordogs/includes
@@ -15,7 +15,7 @@
  *
  * This class defines all code necessary to run during the plugin's deactivation.
  *
- * @since      1.0.0
+ * @since      0.1.0
  * @package    Wordogs
  * @subpackage Wordogs/includes
  * @author     webophonic <contact@webophonic.com>
@@ -27,7 +27,7 @@ class Wordogs_Deactivator {
 	 *
 	 * Long Description.
 	 *
-	 * @since    1.0.0
+	 * @since    0.1.0
 	 */
 	public static function deactivate() {
 
